@@ -2,7 +2,6 @@ package com.telran.qa.tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver.Timeouts;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
@@ -21,21 +20,32 @@ public class OpenGoogleTest {
 
     @Test
     public void testOpenGoogle(){
-       wd.findElement(By.className("gb_D")).click();
-       wd.findElement(By.className("gb_D")).click();
+        click(By.className("gb_D"));
+        click(By.className("gb_D"));
+    }
+
+    private void click(By locator) {
+        wd.findElement(locator).click();
     }
 
     @Test
     public void testSearchGoogle() throws InterruptedException {
-        wd.findElement(By.name("q")).click();
+        click(By.name("q"));
         wd.findElement(By.name("q")).clear();
         wd.findElement(By.name("q")).sendKeys("Java");
 
         Thread.sleep(3000);
     }
 
+    @Test
+    public void testOpenProfile() throws InterruptedException {
+        click(By.id("gb_70"));
+
+        Thread.sleep(3000);
+    }
+
     @AfterClass
     public void tearDown(){
-        wd.quit();
+       wd.quit();
     }
 }
