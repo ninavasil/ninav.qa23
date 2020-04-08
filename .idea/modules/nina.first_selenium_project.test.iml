@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id="first_selenium_project:test" external.linked.project.path="$MODULE_DIR$/../../first_selenium_project" external.root.project.path="$MODULE_DIR$/../../first_selenium_project" external.system.id="GRADLE" external.system.module.group="nina" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
-  <component name="ExternalSystem" linkedProjectPath="$MODULE_DIR$/../../first_selenium_project" rootProjectPath="$MODULE_DIR$/../../first_selenium_project" />
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output-test url="file://$MODULE_DIR$/../../first_selenium_project/out/test/classes" />
     <exclude-output />
@@ -10,7 +9,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="first_selenium_project.main" />
+    <orderEntry type="module" module-name="nina.first_selenium_project.main" />
     <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-java:3.141.59" level="project" />
     <orderEntry type="library" name="Gradle: org.testng:testng:7.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-chrome-driver:3.141.59" level="project" />

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id="first_selenium_project" external.linked.project.path="$MODULE_DIR$/../../first_selenium_project" external.root.project.path="$MODULE_DIR$/../../first_selenium_project" external.system.id="GRADLE" external.system.module.group="nina" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
-  <component name="ExternalSystem" linkedProjectPath="$MODULE_DIR$/../../first_selenium_project" rootProjectPath="$MODULE_DIR$/../../first_selenium_project" />
+  <component name="ExternalSystem" externalSystem="GRADLE" externalSystemModuleGroup="nina" externalSystemModuleVersion="1.0-SNAPSHOT" linkedProjectId="first_selenium_project" linkedProjectPath="$MODULE_DIR$/../../first_selenium_project" rootProjectPath="$MODULE_DIR$/../../first_selenium_project" />
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../first_selenium_project">
       <excludeFolder url="file://$MODULE_DIR$/../../first_selenium_project/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../first_selenium_project/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../first_selenium_project/out" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
