@@ -31,10 +31,11 @@ public class BoardCreationTests {
         fillLoginForm("lika-ki@mail.ru", "VsjoHorosho11");
         confirmLogin();
         CreateBoard();
-        //chooseCreateBoard
-        //inputNameOfBoard
-        //clickButtonCreateBoard
-        //returnHome
+        returnHome();
+    }
+
+    public void returnHome() {
+        click(By.cssSelector("[color='light']"));
     }
 
     public void CreateBoard() {
