@@ -19,9 +19,9 @@ public class BoardCreationTests {
     @BeforeMethod
     public void setUp(){
         wd= new ChromeDriver();
-      //  wd.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-     //   wait = new WebDriverWait(wd,20);
-     //   wd.manage().window().maximize();
+        wd.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        wait = new WebDriverWait(wd,20);
+        wd.manage().window().maximize();
         wd.navigate().to("https://trello.com/");
     }
 
@@ -30,25 +30,33 @@ public class BoardCreationTests {
         clickLogin();
         fillLoginForm("lika-ki@mail.ru", "VsjoHorosho11");
         confirmLogin();
-        //initBoardCreation
-        //fillBoardForm
-        //confirmBoardCreation
-        //returnToHomePage
+        CreateBoard();
+        //chooseCreateBoard
+        //inputNameOfBoard
+        //clickButtonCreateBoard
+        //returnHome
     }
 
-    public void confirmLogin() {
-       // wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login-submit"))).click();
-        click(By.id("login-submit"));
+    public void CreateBoard() {
+        click(By.name("add"));
+        click(By.xpath("//button[@data-test-id='header-create-board-button']//./p[@class='_2DBw9GxD3tha0R']"));
+        type(By.cssSelector("input[placeholder='Add board title']"),"myFirstBoard");
+        click(By.xpath("//*[@data-test-id='create-board-submit-button']"));
+    }
+
+
+    public void clickLogin() {
+        click(By.cssSelector("[href='/login']"));
     }
 
     public void fillLoginForm(String userEmail, String password) {
         type(By.name("user"), userEmail);
         click(By.cssSelector("#login.button-green"));
-        type(By.xpath("//input[@id='password']"), password);
+        type(By.cssSelector("input#password"), password);
     }
 
-    public void clickLogin() {
-        click(By.cssSelector("[href='/login']"));
+    public void confirmLogin() {
+        click(By.id("login-submit"));
     }
 
     public void type(By locator, String text) {
@@ -58,9 +66,8 @@ public class BoardCreationTests {
     }
 
     public void click(By locator) {
-     //   wait.until(ExpectedConditions.presenceOfElementLocated(locator)).click();
-
-        wd.findElement(locator).click();
+         wait.until(ExpectedConditions.presenceOfElementLocated(locator)).click();
+      // wd.findElement(locator).click();
     }
 
   //  @AfterMethod
