@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 public class TeamCreationTests extends TestBase{
 
     @Test
-    public void teamCreation() throws InterruptedException {
         Thread.sleep(5000);
         clickCreateTeam();
         fillingForm("My Testteam",By.cssSelector("[class='_38pq5NbRWAG39y']"));
