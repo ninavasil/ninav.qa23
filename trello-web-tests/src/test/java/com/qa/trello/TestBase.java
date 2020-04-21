@@ -85,7 +85,7 @@ public class TestBase {
      //   wd.findElement(locator).click();
     }
 
-    public void CreateBoard() throws InterruptedException {
+    public void createBoard() throws InterruptedException {
         Thread.sleep(5000);
         click(By.name("add"));
         click(By.xpath("//button[@data-test-id='header-create-board-button']//./p[@class='_2DBw9GxD3tha0R']"));
@@ -103,6 +103,11 @@ public class TestBase {
         fillLoginForm(email, password);
         confirmLogin();
     }
+    public int getBoardsCount() {
+        return wd.findElements(By.xpath("//*[@class=\"icon-lg icon-member\"]/../../..//li")).size()-1;
+    }
+
+
 }
 
 
