@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1m15.20s</div>
+<div class="counter">1m9.03s</div>
 <p>duration</p>
 </div>
 </td>
@@ -76,28 +76,12 @@
 <a name="testTeamCreation"></a>
 <h3 class="failures">testTeamCreation</h3>
 <span class="code">
-<pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=81.0.4044.122)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-QU12992', ip: '192.168.1.12', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:60668}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 2eed66d75f6615a3d56c60de57181c8e
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at com.qa.trello.TestBase.click(TestBase.java:91)
-	at com.qa.trello.TestBase.clickCreateTeam(TestBase.java:51)
-	at com.qa.trello.TeamCreationTests.testTeamCreation(TeamCreationTests.java:11)
+<pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.cssSelector: [class='_38pq5NbRWAG39y'] (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.qa.trello.TestBase.click(TestBase.java:103)
+	at com.qa.trello.TestBase.fillingForm(TestBase.java:78)
+	at com.qa.trello.TeamCreationTests.testTeamCreation(TeamCreationTests.java:12)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -151,6 +135,33 @@ Session ID: 2eed66d75f6615a3d56c60de57181c8e
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;[class='_38pq5NbRWAG39y']&quot;}
+  (Session info: chrome=81.0.4044.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-QU12992', ip: '192.168.1.12', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\User\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:65087}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6df86957c7d9aade9c3fa9159f51c30f
+*** Element info: {Using=css selector, value=[class='_38pq5NbRWAG39y']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 56 more
 </pre>
 </span>
 </div>
@@ -167,7 +178,7 @@ Session ID: 2eed66d75f6615a3d56c60de57181c8e
 </thead>
 <tr>
 <td class="failures">testTeamCreation</td>
-<td class="failures">1m15.20s</td>
+<td class="failures">1m9.03s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -175,60 +186,73 @@ Session ID: 2eed66d75f6615a3d56c60de57181c8e
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 24368
+<pre>Starting ChromeDriver 80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}) on port 43372
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[1587812485.695][WARNING]: This version of ChromeDriver has not been tested with Chrome version 81.
-[1587812490.138][WARNING]: Timed out connecting to Chrome, retrying...
-Apr 25, 2020 2:01:42 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1587819530.960][WARNING]: This version of ChromeDriver has not been tested with Chrome version 81.
+[1587819533.358][WARNING]: Timed out connecting to Chrome, retrying...
+Apr 25, 2020 3:58:58 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-[1587812504.920][WARNING]: Timed out connecting to Chrome, retrying...
-[1587812509.720][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812509.837][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812510.004][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812513.606][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812515.368][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812516.389][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812523.643][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812525.133][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812554.700][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812555.019][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812555.424][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812555.526][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812555.633][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812602.790][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812602.895][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812602.997][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812603.108][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812603.212][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812603.322][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812603.424][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812603.526][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812603.648][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812603.751][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812603.854][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812603.957][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812604.069][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812604.174][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812604.276][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812604.381][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812604.493][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812604.597][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812604.703][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812604.807][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812604.912][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812605.014][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812605.117][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812605.220][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812605.322][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812605.424][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812605.545][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812605.648][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812605.754][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812605.875][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812605.978][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812606.246][SEVERE]: Timed out receiving message from renderer: 0.100
-[1587812614.349][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819540.569][WARNING]: Timed out connecting to Chrome, retrying...
+[1587819545.643][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819545.780][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819555.256][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819557.526][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819562.352][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819566.732][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819586.001][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819586.567][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819586.858][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819586.962][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819587.064][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819587.170][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819587.279][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819587.385][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819587.491][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819589.060][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819590.437][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819590.543][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819604.223][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819604.334][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819605.262][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819605.379][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819605.485][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819617.304][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819617.408][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819620.771][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819620.874][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819620.978][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819621.081][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819621.189][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819621.368][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819621.481][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819621.584][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819621.687][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819625.097][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819626.610][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819626.712][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819626.814][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819626.919][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819627.021][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819627.129][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819627.232][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819627.335][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819627.438][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819627.544][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819627.647][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819627.749][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819627.853][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819627.956][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819628.058][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819628.164][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819628.266][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819628.391][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819628.518][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819632.103][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819632.205][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819632.314][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819632.420][SEVERE]: Timed out receiving message from renderer: 0.100
+[1587819632.523][SEVERE]: Timed out receiving message from renderer: 0.100
 </pre>
 </span>
 </div>
@@ -240,7 +264,7 @@ INFO: Detected dialect: W3C
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.1</a> at Apr 25, 2020 2:03:55 PM</p>
+<a href="http://www.gradle.org">Gradle 6.1</a> at Apr 25, 2020 4:01:30 PM</p>
 </div>
 </div>
 </body>
