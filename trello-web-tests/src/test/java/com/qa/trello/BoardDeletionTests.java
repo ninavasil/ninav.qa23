@@ -1,13 +1,15 @@
 package com.qa.trello;
 
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class BoardDeletionTests extends TestBase{
     @BeforeMethod
     public void ensurePrecondition() throws InterruptedException {
+        if(isOnBoardsPage()){
+        click(By.cssSelector("[href$='boards']"));
+        }
         if(getBoardsCount()==0){
             createBoard();
         }
@@ -15,7 +17,7 @@ public class BoardDeletionTests extends TestBase{
 
     @Test
     public void testBoardDeletion() throws InterruptedException {
-        int before=getBoardsCount();
+       int before=getBoardsCount();
         openFirstPersonalBoard();
         clickMoreButton();
         initBoardDeletion();
@@ -23,7 +25,7 @@ public class BoardDeletionTests extends TestBase{
         returnHome();
         int after= getBoardsCount();
         System.out.println("was:"+before+ "now:"+after);
-      //  Assert.assertEquals(after,before-1);
+      // Assert.assertEquals(after,before-1);
     }
 
 

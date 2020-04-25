@@ -11,9 +11,10 @@ public class BoardCreationTests extends TestBase {
         createBoard();
         returnHome();
         int after= getBoardsCount();
+        System.out.println("was:"+before+ " now:"+after);
       //  Assert.assertEquals(after, before+1);
     }
 
-//@Test(enabled=false) - тест не запускается
+
 
 }

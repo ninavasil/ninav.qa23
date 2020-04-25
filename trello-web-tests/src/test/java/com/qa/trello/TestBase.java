@@ -23,13 +23,24 @@ public class TestBase {
         loginAtlasian("lika-ki@mail.ru", "VsjoHorosho11");
     }
 
-  //  @AfterMethod
+   // @AfterMethod
     public void tearDown(){
         wd.quit();
     }
+
     public void returnHome()  {
         click(By.cssSelector("[color='light']"));
         click(By.cssSelector("[color='light']"));
+    }
+
+    public void inviteTeamLater(){
+        if(isElementPresent(By.cssSelector("[data-test-id='show-later-button']")).size()!=0){
+            click(By.cssSelector("[data-test-id='show-later-button']"));
+        }
+    }
+
+    public boolean isElementPresent(By locator){
+       return wd.findElements(locator).size()>0;
     }
 
     public void inviteYourTeam() {
@@ -47,14 +58,20 @@ public class TestBase {
 
     public void clickCreateTeam() throws InterruptedException {
         Thread.sleep(5000);
-        click(By.cssSelector(".icon-add"));
+        click(By.xpath("//span[@class='icon-add icon-sm _2aV_KY1gTq1qWc']"));
     }
 
     public void fillingForm(String teamName, By locatorType) throws InterruptedException {
         Thread.sleep(5000);
         type(By.cssSelector("input[class='_1CLyNodCAa-vQi']"),teamName);
-        click(By.cssSelector(".icon-sm icon-down"));
-        click(By.cssSelector("div#teamTypeSelect"));
+       // click(By.cssSelector(".icon-sm icon-down"));
+     //  click(By.cssSelector("div[data-test-id='header-create-team-type-input']"));
+
+       click(By.cssSelector("div#teamTypeSelect"));
+       // click(By.xpath("//div[text()='Education' and @class='css-1yqjdp6']"));
+        click(By.cssSelector("[data-test-id='header-create-team-type-input-education']"));
+     //  click(By.xpath("//*[contains=(@data-test-id, 'header-create-team-type-input'))]/li[contains=(text(), 'Education'))]"));
+        //*[contains(@class, 'point_info') and contains(string(), 'Краснодар')]
         Thread.sleep(5000);
         click(locatorType);
     }
@@ -104,10 +121,12 @@ public class TestBase {
         confirmLogin();
     }
     public int getBoardsCount() {
-        return wd.findElements(By.xpath("//*[@class=\"icon-lg icon-member\"]/../../..//li")).size()-1;
+        return wd.findElements(By.xpath("//*[@class=\"icon-lg icon-member\"]/../../../../div")).size()-1;
     }
-
-
+    protected boolean isOnBoardsPage() {
+        String url=wd.getCurrentUrl();
+        return url.contains("boards");
+    }
 }
 
 
